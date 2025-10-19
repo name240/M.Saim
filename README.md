@@ -1,4 +1,4 @@
-# jxqefi
+# Majoka
 
 <html>
 <html lang="en">
@@ -105,15 +105,16 @@
   </nav>
 
   <div id="home" class="container">
-    <img src="C:\Users\HP\Desktop\M.S.M\M.S.M MAJOKA_files\457135505_122100649286495437_5516182662454118189_n.jpg" alt="School Logo" />
+    <img src="C:\Users\HP\Desktop\New folder\School Logo.jpg" alt="School Logo" />
+
     <div class="school-name">THE RADIANCE SCHOOL SYSTEM</div>
     <div class="tagline">Glow the minds with knowledge</div>
   </div>
 
   <section id="about">
-    <h2><u> M.S.M </u><br>
+    <h2> M.S.M 
 	   
-	About Us</br></h2>
+	About </h2>
     <p>
       The Radiance School System is dedicated to empowering students through knowledge,
       creativity, and moral values. We provide a nurturing environment that encourages
