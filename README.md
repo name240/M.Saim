@@ -114,8 +114,6 @@ section h1 {
   </div>
 
   <section id="about">
-    <h2> M.S.M </h2>
-	   
 	<h2>About </h2>
     <p>
       The Radiance School System is dedicated to empowering students through knowledge
