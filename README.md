@@ -1,4 +1,3 @@
-# This Website is Created By: M.Saim Majoka.
 
 <html>
 <html lang="en">
@@ -102,6 +101,7 @@
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
+	<a href=#created By:">createdBy:</a>
   </nav>
 
   <div id="home" class="container">
@@ -116,8 +116,8 @@
 	   
 	About </h2>
     <p>
-      The Radiance School System is dedicated to empowering students through knowledge,
-      creativity, and moral values. We provide a nurturing environment that encourages
+      The Radiance School System is dedicated to empowering students through knowledge<br>
+      creativity, and moral values. We provide a nurturing environment that encourages</br>
       learning and personal growth for every student.
     </p>
   </section>
