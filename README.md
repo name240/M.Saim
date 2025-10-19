@@ -101,11 +101,14 @@
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
-	<a href=#created By:">createdBy:</a>
+  </nav>
+  
+  <nav>
+  <a href=#created By:">createdBy:</a>
   </nav>
 
   <div id="home" class="container">
-    <img src="C:\Users\HP\Desktop\New folder\School Logo.jpg" alt="School Logo" />
+    <img src="C:\Users\HP\Desktop\New folder\School Logo.jpg;" alt="School Logo" />
 
     <div class="school-name">THE RADIANCE SCHOOL SYSTEM</div>
     <div class="tagline">Glow the minds with knowledge</div>
@@ -116,8 +119,8 @@
 	   
 	About </h2>
     <p>
-      The Radiance School System is dedicated to empowering students through knowledge<br>
-      creativity, and moral values. We provide a nurturing environment that encourages</br>
+      The Radiance School System is dedicated to empowering students through knowledge
+      creativity, and moral values. We provide a nurturing environment that encourages
       learning and personal growth for every student.
     </p>
   </section>
