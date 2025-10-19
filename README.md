@@ -118,7 +118,7 @@
     <p>
       The Radiance School System is dedicated to empowering students through knowledge,
       creativity, and moral values. We provide a nurturing environment that encourages
-      learning and personal growth for every student.THis website is created by:M.Saim Majoka.THis website is created by:M.Saim Majoka
+      learning and personal growth for every student.                                           THis website is created by:M.Saim Majoka
     </p>
   </section>
 
