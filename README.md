@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=device"/>
   <title>The Radiance School System</title>
   <style>
     /* Basic Reset */
@@ -81,7 +81,10 @@
       color: #002c6b;
       margin-bottom: 20px;
     }
-
+section h1 {
+      color: #002c6b;
+      margin-bottom: 20px;
+    }
     footer {
       background: #002c6b;
       color: white;
@@ -101,10 +104,7 @@
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
-  </nav>
-  
-  <nav>
-  <a href=#created By:">createdBy:</a>
+	<a href=#created By:">createdBy:</a>
   </nav>
 
   <div id="home" class="container">
@@ -115,9 +115,9 @@
   </div>
 
   <section id="about">
-    <h2> M.S.M 
+    <h2> M.S.M </h2>
 	   
-	About </h2>
+	<h2>About </h2>
     <p>
       The Radiance School System is dedicated to empowering students through knowledge
       creativity, and moral values. We provide a nurturing environment that encourages
@@ -131,7 +131,7 @@
     <p>Phone: +92-300-0000000</p>
   </section>
   <section id="created By:">
-  <h2>Created By:</h2>
+  <h1>Created By:</h1>
   <p>M.Saim Majoka</p>
   </section>
   <footer>
