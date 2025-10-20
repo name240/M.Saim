@@ -3,9 +3,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width size=device-width, length size=device, screen size=device, initial-scale=device"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<style>
-body{margin:0;trxt-align:center;background:skyblue;}
+
 h1{font-size:5vw;}
 p{font-size:3vw;}
 	</style>
@@ -24,6 +24,8 @@ p{font-size:3vw;}
       background: linear-gradient(to right, #fefcea, #f1da36);
       min-height: 100vh;
       color: #333;
+	  font-family:Arial;
+	  text-align:center
     }
 
     header {
@@ -35,8 +37,11 @@ p{font-size:3vw;}
     }
 
     nav {
+	width:100%
+	min-height:100vh;
       display: flex;
       justify-content: center;
+	  flex-direction:column;
       background: #0056b3;
       padding: 10px;
     }
