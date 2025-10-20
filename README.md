@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width,text-align:center initial-scale=1.0"/>
 	<style>
 
 h1{font-size:5vw;}
@@ -24,8 +24,8 @@ p{font-size:3vw;}
       background: linear-gradient(to right, #fefcea, #f1da36);
       min-height: 100vh;
       color: #333;
-	  font-family:Arial;
-	  text-align:center
+	
+	  
     }
 
     header {
