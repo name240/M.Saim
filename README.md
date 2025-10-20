@@ -8,7 +8,7 @@
   <style>
     /* Basic Reset */
     * {
-      box-sizing: device;
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
       scroll-behavior: smooth;
@@ -30,7 +30,7 @@
     }
 
     nav {
-      display: flex;
+      display: device;
       justify-content: center;
       background: #0056b3;
       padding: 10px;
