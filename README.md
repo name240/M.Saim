@@ -30,7 +30,7 @@
     }
 
     nav {
-      display: device;
+      display: flex;
       justify-content: center;
       background: #0056b3;
       padding: 10px;
@@ -148,5 +148,15 @@ section h1 {
     });
   </script>
 
+</body>
+</html>
+<html
+	<had>
+	<meta name="viewport"
+content="width=device-width,intinal-scale=1.0">
+<style>
+body{margin:0;trxt-align:center;background:skyblue;}
+h1{front-size=5vw;}
+<p>fist all screens - mobile & computer!</p>
 </body>
 </html>
