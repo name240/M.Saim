@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, length=device, initial-scale=device"/>
+  <meta name="viewport" content="width size=device-width, length size=device, screen size=device, initial-scale=device"/>
 	<style>
 body{margin:0;trxt-align:center;background:skyblue;}
 h1{font-size:5vw;}
