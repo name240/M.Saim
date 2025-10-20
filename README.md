@@ -3,11 +3,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=device"/>
+  <meta name="viewport" content="width=device-width, length=device, initial-scale=device"/>
 	<style>
 body{margin:0;trxt-align:center;background:skyblue;}
-h1{font-size:8vw;}
-p{font-size:8vw;}
+h1{font-size:5vw;}
+p{font-size:3vw;}
 	</style>
   <title>The Radiance School System</title>
   <style>
