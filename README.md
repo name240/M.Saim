@@ -1,145 +1,154 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>M.S.M Logo - Centered Version</title>
+  <title>M.S.M Firecore V2</title>
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html, body {
-      width: 100%;
       height: 100%;
-      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-      font-family: 'Segoe UI', sans-serif;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+      background: radial-gradient(circle at top, #1a0000, #000000 80%);
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    .logo-panel {
-      width: 320px;
+    .logo-box {
+      position: relative;
+      width: 360px;
       height: 200px;
       background: rgba(255, 255, 255, 0.05);
       border-radius: 20px;
+      backdrop-filter: blur(16px);
       box-shadow:
-        0 0 20px rgba(0, 255, 255, 0.1),
-        0 0 40px rgba(0, 255, 255, 0.15),
-        inset 0 0 20px rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      position: relative;
+        0 0 30px rgba(255, 0, 0, 0.25),
+        0 0 70px rgba(255, 0, 0, 0.3),
+        inset 0 0 10px rgba(255, 255, 255, 0.06);
       overflow: hidden;
-      padding: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: all 0.3s ease-in-out;
       cursor: pointer;
-      transition: transform 0.3s ease;
     }
 
-    .logo-panel:hover {
-      transform: scale(1.03);
+    .logo-box:hover {
+      box-shadow:
+        0 0 40px rgba(255, 0, 0, 0.4),
+        0 0 90px rgba(255, 50, 0, 0.5),
+        inset 0 0 12px rgba(255, 255, 255, 0.08);
     }
 
     .logo-text {
-      color: #ffffff;
-      font-size: 40px;
+      font-size: 44px;
       font-weight: bold;
-      letter-spacing: 10px;
-      z-index: 2;
+      letter-spacing: 12px;
+      background: linear-gradient(to right, #ff4d4d, #ff0000, #ff4d00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       text-shadow:
-        0 0 5px #00f2fe,
-        0 0 10px #4facfe,
-        0 0 15px #00f2fe;
-      animation: glowPulse 3s ease-in-out infinite;
+        0 0 10px rgba(255, 0, 0, 0.7),
+        0 0 20px rgba(255, 50, 0, 0.6),
+        0 0 30px rgba(255, 80, 0, 0.5);
+      z-index: 2;
+      animation: glow 3.5s ease-in-out infinite;
     }
 
-    .shine-overlay {
+    .light-wave {
       position: absolute;
-      top: -50%;
+      top: 0;
       left: -100%;
       width: 200%;
-      height: 200%;
-      background: linear-gradient(120deg, rgba(255,255,255,0.05), rgba(255,255,255,0.3), rgba(255,255,255,0.05));
-      transform: rotate(20deg);
-      animation: shineSlide 6s linear infinite;
-      pointer-events: none;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.07) 50%,
+        transparent 100%
+      );
+      transform: skewX(-20deg);
+      animation: waveMove 5s linear infinite;
+      z-index: 1;
     }
 
-    .lines {
+    .reflection-top {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 50%;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.07), transparent);
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
       z-index: 1;
-      background: repeating-linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.02),
-        rgba(255, 255, 255, 0.02) 2px,
-        transparent 2px,
-        transparent 8px
-      );
+      pointer-events: none;
     }
 
-    @keyframes shineSlide {
-      0% { transform: translateX(-100%) rotate(20deg); }
-      100% { transform: translateX(100%) rotate(20deg); }
-    }
-
-    @keyframes glowPulse {
+    @keyframes glow {
       0%, 100% {
         text-shadow:
-          0 0 5px #00f2fe,
-          0 0 10px #4facfe,
-          0 0 15px #00f2fe;
+          0 0 10px rgba(255, 0, 0, 0.7),
+          0 0 20px rgba(255, 50, 0, 0.6),
+          0 0 30px rgba(255, 80, 0, 0.5);
       }
       50% {
         text-shadow:
-          0 0 10px #00f2fe,
-          0 0 20px #4facfe,
-          0 0 30px #00f2fe;
+          0 0 15px rgba(255, 50, 0, 0.9),
+          0 0 25px rgba(255, 100, 0, 0.7),
+          0 0 40px rgba(255, 120, 0, 0.6);
       }
     }
 
-    /* Responsive */
-    @media screen and (max-width: 400px) {
-      .logo-panel {
+    @keyframes waveMove {
+      0% {
+        left: -100%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 400px) {
+      .logo-box {
         width: 90%;
         height: 180px;
       }
 
       .logo-text {
-        font-size: 32px;
-        letter-spacing: 6px;
+        font-size: 34px;
+        letter-spacing: 8px;
       }
     }
   </style>
 </head>
 <body>
 
- <center> <div class="logo-panel" onclick="restartShine()">
-    <div class="lines"></div>
-    <div class="shine-overlay"></div>
+<center>  <div class="logo-box" onclick="restartWave()">
+    <div class="light-wave"></div>
+    <div class="reflection-top"></div>
     <div class="logo-text">M.S.M</div>
-  </div> </center>
+  </div></center>
 
   <script>
-    function restartShine() {
-      const shine = document.querySelector('.shine-overlay');
-      shine.style.animation = 'none';
-      void shine.offsetWidth;
-      shine.style.animation = 'shineSlide 6s linear infinite';
+    function restartWave() {
+      const wave = document.querySelector('.light-wave');
+      wave.style.animation = 'none';
+      void wave.offsetWidth;
+      wave.style.animation = 'waveMove 5s linear infinite';
     }
   </script>
 
 </body>
 </html>
-
 
 
 
