@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -122,11 +122,11 @@
 </head>
 <body>
 
-  <div class="logo-panel" onclick="restartShine()">
+ <center> <div class="logo-panel" onclick="restartShine()">
     <div class="lines"></div>
     <div class="shine-overlay"></div>
     <div class="logo-text">M.S.M</div>
-  </div>
+  </div> </center>
 
   <script>
     function restartShine() {
