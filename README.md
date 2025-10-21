@@ -3,80 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Beautiful Logo</title>
+  <title>M.S.M Logo - Centered Version</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      height: 100vh;
-      background: linear-gradient(135deg, #1e1e2f, #121212);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
       font-family: 'Segoe UI', sans-serif;
-    }
-
-    .logo-container {
-      position: relative;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #00f2fe, #4facfe);
-      box-shadow: 0 0 20px rgba(79, 172, 254, 0.8),
-                  0 0 40px rgba(0, 242, 254, 0.6),
-                  0 0 60px rgba(0, 242, 254, 0.4);
       display: flex;
       align-items: center;
       justify-content: center;
-      animation: pulse 3s infinite;
-      cursor: pointer;
     }
 
-    .logo-text {
-      font-size: 32px;
-      color: white;
-      font-weight: bold;
-      text-shadow: 0 0 10px #fff,
-                   0 0 20px #00f2fe,
-                   0 0 30px #4facfe;
+    .logo-panel {
+      width: 320px;
+      height: 200px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow:
+        0 0 20px rgba(0, 255, 255, 0.1),
+        0 0 40px rgba(0, 255, 255, 0.15),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
       transition: transform 0.3s ease;
     }
 
-    .logo-container:hover .logo-text {
-      transform: scale(1.1);
+    .logo-panel:hover {
+      transform: scale(1.03);
     }
 
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 20px rgba(79, 172, 254, 0.8),
-                    0 0 40px rgba(0, 242, 254, 0.6),
-                    0 0 60px rgba(0, 242, 254, 0.4);
+    .logo-text {
+      color: #ffffff;
+      font-size: 40px;
+      font-weight: bold;
+      letter-spacing: 10px;
+      z-index: 2;
+      text-shadow:
+        0 0 5px #00f2fe,
+        0 0 10px #4facfe,
+        0 0 15px #00f2fe;
+      animation: glowPulse 3s ease-in-out infinite;
+    }
+
+    .shine-overlay {
+      position: absolute;
+      top: -50%;
+      left: -100%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(120deg, rgba(255,255,255,0.05), rgba(255,255,255,0.3), rgba(255,255,255,0.05));
+      transform: rotate(20deg);
+      animation: shineSlide 6s linear infinite;
+      pointer-events: none;
+    }
+
+    .lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.02),
+        rgba(255, 255, 255, 0.02) 2px,
+        transparent 2px,
+        transparent 8px
+      );
+    }
+
+    @keyframes shineSlide {
+      0% { transform: translateX(-100%) rotate(20deg); }
+      100% { transform: translateX(100%) rotate(20deg); }
+    }
+
+    @keyframes glowPulse {
+      0%, 100% {
+        text-shadow:
+          0 0 5px #00f2fe,
+          0 0 10px #4facfe,
+          0 0 15px #00f2fe;
       }
       50% {
-        box-shadow: 0 0 30px rgba(79, 172, 254, 1),
-                    0 0 60px rgba(0, 242, 254, 0.8),
-                    0 0 90px rgba(0, 242, 254, 0.6);
+        text-shadow:
+          0 0 10px #00f2fe,
+          0 0 20px #4facfe,
+          0 0 30px #00f2fe;
       }
-      100% {
-        box-shadow: 0 0 20px rgba(79, 172, 254, 0.8),
-                    0 0 40px rgba(0, 242, 254, 0.6),
-                    0 0 60px rgba(0, 242, 254, 0.4);
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 400px) {
+      .logo-panel {
+        width: 90%;
+        height: 180px;
+      }
+
+      .logo-text {
+        font-size: 32px;
+        letter-spacing: 6px;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="logo-container" onclick="glowEffect()">
-    <div class="logo-text"> M.S.M </div>
+  <div class="logo-panel" onclick="restartShine()">
+    <div class="lines"></div>
+    <div class="shine-overlay"></div>
+    <div class="logo-text">M.S.M</div>
   </div>
 
   <script>
-    function glowEffect() {
-      const logo = document.querySelector('.logo-container');
-      logo.style.animation = 'none';
-      void logo.offsetWidth; // Trigger reflow
-      logo.style.animation = 'pulse 3s infinite';
+    function restartShine() {
+      const shine = document.querySelector('.shine-overlay');
+      shine.style.animation = 'none';
+      void shine.offsetWidth;
+      shine.style.animation = 'shineSlide 6s linear infinite';
     }
   </script>
 
